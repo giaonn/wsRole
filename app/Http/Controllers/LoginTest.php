@@ -22,10 +22,28 @@ class LoginTest extends Controller
         $passGet=$request->pass;
 
         for($i=0; $i<count($lstAcc); $i++){
+
             if($lstAcc[$i]['user'] == $userGet && $lstAcc[$i]['pass'] == $passGet) {
-                return 'true';
+                if($lstAcc[$i]['fk_typeacc']==1){
+                       return view('formSys',['a'=>$lstAcc[$i]['fk_typeacc'],'b'=>$lstAcc[$i]['user']]);
+                }else if($lstAcc[$i]['fk_typeacc']==5){
+                       return view('formViewer',['a'=>$lstAcc[$i]['fk_typeacc']]);
+                }
+
             }
+
         }
         return 'false';
     }
+
+    public function  pushlstUser(Request $request){
+
+        $lstAcc=MAcount::all()->toArray();
+
+       return view('formSys',['user'=>$lstAcc]);
+
+    }
+
+
+
 }

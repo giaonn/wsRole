@@ -11,6 +11,8 @@
 |
 */
 
+use App\MType_Account;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -63,9 +65,26 @@ Route::get('login',function (){
 
 });
 
-Route::post('postForm',['as' => 'postForm','uses'=> 'LoginTest@checkUser']);
+Route::post('postForm',['as' => 'postForm','uses'=> 'LoginTest@pushlstUser']);
 
+Route::get('/getLstacc',function (){
+//   $lstac= MType_Account::find(5)->account;
+//    //dd($lstac);
+//
+//    foreach ($lstac as $acc){
+//
+//        echo $acc.'<br>';
+//    }
 
+    $lstfar=\App\MAcount::find(1);
+    echo  $lstfar->type_account->name;
+});
 
+Route::get('/formSys',['as'=>'formSys',function(){
+   return view('formSys');
+}]);
 
+Route::get('/formViewer',['as'=>'formViewer',function(){
+    return view('formViewer');
+}]);
 

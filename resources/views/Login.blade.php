@@ -30,10 +30,6 @@
         background-color: #f44336;
     }
 
-    .imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-    }
 
 
     .container {
@@ -58,7 +54,7 @@
 </style>
 <body>
 
-<h2>Login Form</h2>
+<h2>LOGIN</h2>
 
     <form action={{"postForm"}} method="post">
         {!! csrf_field() !!}
