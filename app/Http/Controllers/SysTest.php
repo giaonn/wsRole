@@ -9,6 +9,6 @@ class SysTest extends Controller
     //
 
     public function sysHandle(){
-
+        return 'haha';
     }
 }

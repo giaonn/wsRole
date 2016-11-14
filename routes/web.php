@@ -67,6 +67,8 @@ Route::get('login',function (){
 
 Route::post('postForm',['as' => 'postForm','uses'=> 'LoginTest@pushlstUser']);
 
+Route::post('saveRole',['as'=>'saveRole','uses'=>'SysTest@sysHandle']);
+
 Route::get('/getLstacc',function (){
 //   $lstac= MType_Account::find(5)->account;
 //    //dd($lstac);

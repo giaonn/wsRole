@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\MAcount;
+use App\MApp;
+use App\MRole;
 use Illuminate\Http\Request;
 
 class LoginTest extends Controller
@@ -39,8 +41,10 @@ class LoginTest extends Controller
     public function  pushlstUser(Request $request){
 
         $lstAcc=MAcount::all()->toArray();
+        $lstApp=MApp::all()->toArray();
+        $lstRole=MRole::all()->toArray();
 
-       return view('formSys',['user'=>$lstAcc]);
+       return view('formSys',['user'=>$lstAcc,'app'=>$lstApp,'role'=>$lstRole]);
 
     }
 
