@@ -65,7 +65,7 @@ Route::get('login',function (){
 
 });
 
-Route::post('postForm',['as' => 'postForm','uses'=> 'LoginTest@pushlstUser']);
+Route::post('postForm',['as' => 'postForm','uses'=> 'LoginTest@checkUser']);
 
 Route::post('saveRole',['as'=>'saveRole','uses'=>'SysTest@sysHandle']);
 

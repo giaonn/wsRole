@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class MAcount extends Model
 {
     protected $table='account';
-//  public $timestamps=false;
+    public $timestamps=false;
 
     public function type_account(){
 

@@ -1,8 +1,15 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: bmlg
- * Date: 14/11/2016
- * Time: 16:36
- */
-echo 'Form Viewer';
+<html>
+    <head>
+        <title>
+
+        </title>
+
+    </head>
+    <body>
+    @foreach($lstApp as $app)
+        <button type="button" >{!! $app->name !!}</button><br>
+    @endforeach
+
+    </body>
+
+</html>
